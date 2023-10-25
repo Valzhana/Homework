@@ -1,0 +1,11 @@
+{% extends 'online_shop_app/base.html' %}
+
+{% block title %}{{ user.name }}'s Products for last  {{ days }} days {% endblock %}
+
+{% block content %}
+    <h2>все продукты пользователя: {{ user.name }} за последние {{ days }} дней</h2>
+    {% for product in product_set %}
+
+                <p>{{ product }}</p>
+    {% endfor %}
+{% endblock %}
